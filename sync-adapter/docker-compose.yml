@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  sync-adapter.producer:
+    image: ${DOCKER_REGISTRY-}syncadapterproducer
+    build:
+      context: .
+      dockerfile: sync-adapter.producer/Dockerfile
+    env_file:
+      - .env
+
+  sync-adapter.consumer:
+    image: ${DOCKER_REGISTRY-}syncadapterconsumer
+    build:
+      context: .
+      dockerfile: sync-adapter.consumer/Dockerfile
+    env_file:
+      - .env

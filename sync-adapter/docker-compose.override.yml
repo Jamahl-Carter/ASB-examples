@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  sync-adapter.producer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  sync-adapter.consumer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+

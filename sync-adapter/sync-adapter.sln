@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sync-adapter.producer", "sy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sync-adapter.consumer", "sync-adapter.consumer\sync-adapter.consumer.csproj", "{27A248C4-C1DE-484F-A5D4-271C1CFE775C}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4117557C-9DB7-4C13-AC4F-BE156C83DD8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{27A248C4-C1DE-484F-A5D4-271C1CFE775C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27A248C4-C1DE-484F-A5D4-271C1CFE775C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27A248C4-C1DE-484F-A5D4-271C1CFE775C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4117557C-9DB7-4C13-AC4F-BE156C83DD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4117557C-9DB7-4C13-AC4F-BE156C83DD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4117557C-9DB7-4C13-AC4F-BE156C83DD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4117557C-9DB7-4C13-AC4F-BE156C83DD8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
