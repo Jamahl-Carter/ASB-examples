@@ -1,4 +1,3 @@
-# Configure the Azure provider
 terraform {
   required_providers {
     azurerm = {
@@ -12,13 +11,18 @@ provider "azurerm" {
   features {}
 }
 
+resource "random_string" "random" {
+  length = 5
+  special = false
+}
+
 resource "azurerm_resource_group" "rg" {
   name     = "rg-sync-adapter-example"
   location = "australiaeast"
 }
 
 resource "azurerm_servicebus_namespace" "ns" {
-  name                = "ns-sync-adapter-servicebus"
+  name                = "ns-servicebus-${random_string.random.result}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = "Standard"
