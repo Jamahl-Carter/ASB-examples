@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  fifo-session-queue.consumer:
+    image: ${DOCKER_REGISTRY-}fifosessionqueueconsumer
+    build:
+      context: .
+      dockerfile: fifo-session-queue.consumer/Dockerfile
+
+  fifo-session-queue.producer:
+    image: ${DOCKER_REGISTRY-}fifosessionqueueproducer
+    build:
+      context: .
+      dockerfile: fifo-session-queue.producer/Dockerfile
+

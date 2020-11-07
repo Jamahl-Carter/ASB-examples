@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  fifo-session-queue.consumer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  fifo-session-queue.producer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
