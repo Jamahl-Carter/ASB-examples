@@ -6,10 +6,13 @@ services:
     build:
       context: .
       dockerfile: fifo-session-queue.consumer/Dockerfile
+    env_file:
+      - .env
 
   fifo-session-queue.producer:
     image: ${DOCKER_REGISTRY-}fifosessionqueueproducer
     build:
       context: .
       dockerfile: fifo-session-queue.producer/Dockerfile
-
+    env_file:
+      - .env
