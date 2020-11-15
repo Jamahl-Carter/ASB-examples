@@ -3,14 +3,14 @@ todo
 ## Quick start
 0. Clone this repository `git clone https://github.com/Jamahl-Carter/ASB-examples.git`
 1. Set-up Azure resources. 
-    - Navigate to ./ioc folder in powershell.
+    - Navigate to ./terraform folder in powershell.
     - `az login`
     - Ensure appropriate subscription is set: `az account set --subscription="subscription ID"`, to see current subscription use `az account show`.
     - Initilise working dir: `terraform init`
     - Generate/review terraform plan: `terraform plan -out plan.tfplan`
     - Create Azure resources: `terraform apply plan.tfplan`
 2. Configuring application
-    - Update .env file endpoint value to match newly created service bus namespace. You can use `terraform show -json` to see relevant Azure resource details.
+    - Update .env file endpoint value to match newly created service bus namespace. You can use `terraform show -json` to see relevant Azure resource details, or login through Azure portal.
     - Update .env SAS key value to key from shared access policy.
 3. Running application
     - Start application: `docker-compose up --scale sync-adapter.consumer={int: no. of consumer instances}`
