@@ -34,7 +34,7 @@ namespace sync_adapter.producer.Controllers
             {
                 tasks.Add(_requestReplyService.ExecuteRequestReplyOverSyncAsync($"{batchCorrelation}: Message number: {i + 1}"));
 
-                if (tasks.Count > 100) // 100 at a time
+                if (tasks.Count >= 100) // 100 at a time
                 {
                     await Task.WhenAll(tasks);
                     tasks.Clear();
