@@ -10,7 +10,7 @@ todo
     - Generate/review terraform plan: `terraform plan -out plan.tfplan`
     - Create Azure resources: `terraform apply plan.tfplan`
 2. Configuring application
-    - Update .env file endpoint value to match newly created service bus namespace.
+    - Update .env file endpoint value to match newly created service bus namespace. You can use `terraform show -json` to see relevant Azure resource details.
     - Update .env SAS key value to key from shared access policy.
 3. Running application
     - Start application: `docker-compose up --scale sync-adapter.consumer={int: no. of consumer instances}`
