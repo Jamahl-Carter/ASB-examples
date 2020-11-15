@@ -1,5 +1,5 @@
 # Managing Syncronous Integrations with Azure Service Bus
-todo
+Example implementation from this [article](https://medium.com/@carterjamahl/adopting-async-messaging-with-azure-service-bus-4c936396b334), operating a async workflow within a sync context.
 ## Quick start
 0. Clone this repository `git clone https://github.com/Jamahl-Carter/ASB-examples.git`
 1. Set-up Azure resources. 
